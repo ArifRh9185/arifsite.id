@@ -1,24 +1,24 @@
-import AnimatedShinyText from "@/components/magicui/animated-shiny-text"
-import ShinyButton from "@/components/magicui/shiny-button"
-import { FlipWords } from "@/components/ui/flip-words"
-import { cn } from "@/lib/utils"
+import ShinyButton from "@/components/magicui/shiny-button.js"
+import { cn } from "@/lib/utils.js"
 import { ArrowRightIcon, Quote, Sparkle } from "lucide-react"
 import { RiNextjsLine } from "react-icons/ri";
 import { FaReact } from "react-icons/fa";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { SiVitest } from "react-icons/si";
-import { people } from "../data/index"
-import { AnimatedTooltip } from "@/components/ui/animated-tooltip"
+import { people } from "../data/index.js"
+import { AnimatedTooltip } from "@/components/ui/animated-tooltip.js"
 import {
   TextRevealCard,
   TextRevealCardDescription,
   TextRevealCardTitle,
-} from "@/components/ui/text-reveal-card";
+} from "@/components/ui/text-reveal-card.js";
 import astrounot from "../assets/astrounot.png"
-import { projects } from "../data/index"
-import { HoverEffect } from "@/components/ui/card-hover-effect"
-import BoxReveal from "@/components/magicui/box-reveal"
+import { projects } from "../data/index.js"
+import { HoverEffect } from "@/components/ui/card-hover-effect.js"
 import { NavLink } from "react-router-dom"
+import BoxReveal from "@/components/magicui/box-reveal.js"
+import AnimatedShinyText from "@/components/magicui/animated-shiny-text.js"
+import { FlipWords } from "@/components/ui/flip-words.js";
 
 
 

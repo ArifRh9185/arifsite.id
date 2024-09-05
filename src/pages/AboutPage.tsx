@@ -1,11 +1,11 @@
-import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
-import { Spotlight } from "@/components/ui/spotlight"
+import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid.js";
+import { Spotlight } from "@/components/ui/spotlight.js"
 import { MdOutlineWorkOutline } from "react-icons/md";
 import { MdOutlineFileDownload } from "react-icons/md";
-import { items, reviews } from "@/data";
-import { cn } from "@/lib/utils";
-import Marquee from "@/components/magicui/marquee";
-import { ReviewCard } from '@/data'
+import { items, reviews } from "@/data/index.js";
+import { cn } from "@/lib/utils.js";
+import Marquee from "@/components/magicui/marquee.js";
+import { ReviewCard } from '@/data/index.js'
 import { FaCode } from "react-icons/fa6";
 
 function shuffleArray(array) {

@@ -1,0 +1,23 @@
+import { jsx as _jsx, jsxs as _jsxs, Fragment as _Fragment } from "react/jsx-runtime";
+import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid.js";
+import { Spotlight } from "@/components/ui/spotlight.js";
+import { MdOutlineWorkOutline } from "react-icons/md";
+import { MdOutlineFileDownload } from "react-icons/md";
+import { items, reviews } from "@/data/index.js";
+import { cn } from "@/lib/utils.js";
+import Marquee from "@/components/magicui/marquee.js";
+import { ReviewCard } from '@/data/index.js';
+import { FaCode } from "react-icons/fa6";
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]]; // Tukar elemen
+    }
+    return array;
+}
+const Row = shuffleArray([...reviews]);
+const Row2 = reviews.sort(() => Math.random() - 5);
+const AboutPage = () => {
+    return (_jsx(_Fragment, { children: _jsxs("div", { "data-aos": "fade-up", "data-aos-duration": '1000', className: "text-neutral-400 p-3 container m-auto w-full", children: ["`", _jsx(Spotlight, { className: "-top-40 left-0 md:-top-20 w-full overflow-hidden", fill: "white" }), _jsx("div", { className: " w-full rounded-md flex antialiased border-b border-dashed py-5 border-slate-500 bg-grid-white/[0.02] relative overflow-hidden", children: _jsxs("div", { className: "relative z-10 w-full md:pt-0 text-justify ", children: [_jsxs("h1", { className: "text-2xl md:text-4xl font-sora font-bold text-center border-b border-dashed pb-5 border-slate-600 bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 bg-opacity-50", children: ["About Me ", _jsx("p", { className: "text-lg p-2 font-semibold", children: " A short story of me " })] }), _jsxs("p", { className: "mt-4 font-normal text-sm font-sora", children: ["Hi! I am Arif Rahman, a seasoned software engineer with a deep passion for creating elegant and efficient solutions through code. With a strong foundation in JavaScript and TypeScript, along with a comprehensive understanding of various frontend libraries and frameworks, I heve been navigating the ever-evolving landscape of web development with enthusiasm and dedication. Currently, reside in Bekasi, Indonesia \uD83C\uDDEE\uD83C\uDDE9.", _jsx("br", {}), _jsx("br", {}), "As a fast learner and adaptive thinker, I thrive in dynamic environments where innovation is the driving force. My collaborative nature allows me to seamlessly integrate with teams, contributing not only my technical prowess but also a humble attitude that values every members input.", _jsx("br", {}), _jsx("br", {}), "This site is my platform to share insights, experiences, and discoveries from my journey as a software engineer. Join me as we delve into the ever-exciting realm of technology, where each line of code has the potential to shape the digital landscape in remarkable ways.", _jsx("br", {}), _jsx("br", {}), "Thank you for visiting, and I look forward to embarking on this knowledge-sharing adventure"] })] }) }), _jsxs("div", { className: "career py-5 font-sora relative", children: [_jsxs("div", { className: "title flex items-center gap-2 text-xl text-neutral-300 pb-3", children: [_jsx(MdOutlineWorkOutline, { className: 'pb-1' }), _jsx("h1", { children: "Career" })] }), _jsx("h2", { children: "My professional career journey" }), _jsxs("a", { href: "#", className: "text-neutral-300 absolute right-0 top-7 text-sm hover:text-neutral-100 duration-300", children: ["Download Resume ", _jsx(MdOutlineFileDownload, { className: "inline" })] })] }), _jsx("div", { "data-aos": "fade-up", "data-aos-duration": "1000", children: _jsx(BentoGrid, { className: "mx-auto md:auto-rows-[20rem]", children: items.map((item, i) => (_jsx(BentoGridItem, { title: item.title, description: item.description, header: item.header, className: cn("[&>p:text-lg] overflow-hidden", item.className), icon: item.icon }, i))) }) }), _jsxs("div", { className: "career py5 font-sora relative", children: [_jsxs("div", { className: "title flex items-center gap-2 text-xl text-neutral-300 pt-5 pb-3", children: [_jsx(FaCode, { className: 'pb-1' }), _jsx("h1", { children: "Skills" })] }), _jsx("h2", { children: "My coding skills" })] }), _jsxs("div", { className: "relative my-3 flex w-full flex-col items-center justify-center overflow-hidden rounded-lg bg-black", children: [_jsx(Marquee, { pauseOnHover: true, className: "[--duration:40s]", children: Row.map((review) => (_jsx(ReviewCard, { ...review }, review.name))) }), _jsx(Marquee, { reverse: true, pauseOnHover: true, className: "[--duration:70s]", children: Row2.map((review) => (_jsx(ReviewCard, { ...review }, review.name))) })] })] }) }));
+};
+export default AboutPage;

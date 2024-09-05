@@ -1,17 +1,17 @@
 import { Routes, Route, useLocation } from "react-router-dom";
 import { useEffect } from "react";
-import HomePage from "./pages/HomePage";
-import AboutPage from "./pages/AboutPage";
-import ProjectPage from "./pages/ProjectPage";
-import ContactPage from "./pages/ContactPage";
-import NavbarComponent from "./pages/components/NavbarComponent";
-import DotPattern from "./components/magicui/dot-pattern";
-import { cn } from "./lib/utils";
-import ShootingStars from "./components/ui/shooting-stars";
+import HomePage from "./pages/HomePage.js";
+import AboutPage from "./pages/AboutPage.js";
+import ProjectPage from "./pages/ProjectPage.js";
+import ContactPage from "./pages/ContactPage.js";
+import NavbarComponent from "./pages/components/NavbarComponent.jsx";
+import DotPattern from "./components/magicui/dot-pattern.js";
+import { cn } from "./lib/utils.js";
+import ShootingStars from "./components/ui/shooting-stars.js";
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // Import AOS CSS
-import DockComponent from "@/pages/components/DockComponent"
-import FooterComponent from "@/pages/components/FooterComponent"
+import DockComponent from "@/pages/components/DockComponent.jsx"
+import FooterComponent from "@/pages/components/FooterComponent.jsx"
 
 AOS.init({
   once:true

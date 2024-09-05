@@ -12,7 +12,7 @@ import { SiPolymerproject } from "react-icons/si";import {
   IconTableColumn,
 } from "@tabler/icons-react";
 import editor from "../data/editor.jpg"
-import { cn } from "@/lib/utils";
+import { cn } from "@/lib/utils.js";
 
 
 

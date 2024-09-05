@@ -1,5 +1,6 @@
-import BlurIn from '@/components/magicui/blur-in'
-import Ripple from '@/components/magicui/ripple'
+
+import BlurIn from '@/components/magicui/blur-in.js'
+import Ripple from '@/components/magicui/ripple.js'
 
 const ProjectPage = () => {
   return (
